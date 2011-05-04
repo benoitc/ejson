@@ -9,6 +9,10 @@ Converted to an independant module by Benoît Chesneau
 
 This product also includes the following third-party components:
 
+ * MochiWeb (http://code.google.com/p/mochiweb/)
+
+   Copyright 2007, Mochi Media Coporation
+ 
  * yajl (http://lloyd.github.com/yajl/)
 
   Copyright 2010, Lloyd Hilaiel
