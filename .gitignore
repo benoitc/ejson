@@ -1,0 +1,17 @@
+*.beam
+*.gz
+*.tpl
+*.o
+*.lo
+*.la
+*.m4
+*.in
+*~
+*.orig
+*.rej
+erl_crash.dump
+*.diff
+*.patch
+.DS_Store
+ebin
+priv
