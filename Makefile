@@ -4,14 +4,14 @@
 
 all:
 	@mkdir -p ebin
-	./rebar compile
+	@./rebar compile
 
 check: test/etap.beam test/util.beam
-	prove test/*.t
+	@prove test/*.t
 
 check_verbose: test/etap.beam test/util.beam
-	prove -v test/*.t
+	@prove -v test/*.t
 
 clean:
-	./rebar clean
-	rm test/*.beam
+	@./rebar clean
+	@rm -f test/*.beam
