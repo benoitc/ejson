@@ -1,7 +1,7 @@
 #! /usr/bin/env escript
 
 main([]) ->
-    code:add_pathz("test"),
+    code:add_pathz("t"),
     code:add_pathz("ebin"),
     
     Cases = read_cases(),
@@ -24,7 +24,7 @@ json_decode(Json) ->
     end.
 
 read_cases() ->
-    CasesPath = filename:join(["test", "cases", "*.json"]),
+    CasesPath = filename:join(["t", "cases", "*.json"]),
     FileNames = lists:sort(filelib:wildcard(CasesPath)),
     lists:map(fun(F) -> make_pair(F) end, FileNames).
 

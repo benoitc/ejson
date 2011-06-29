@@ -2,7 +2,7 @@
 
 main([]) ->
     code:add_pathz("ebin"),
-    code:add_pathz("test"),
+    code:add_pathz("t"),
     
     etap:plan(6),
     etap:is(ejson:decode(<<"true">>), true, "DEC: true -> true"),
