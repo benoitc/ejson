@@ -2,9 +2,12 @@
 %.beam: %.erl
 	erlc -o test/ $<
 
-all:
+all: deps
 	@mkdir -p ebin
 	@./rebar compile
+
+deps:
+	@rebar get-deps
 
 check: test/etap.beam test/util.beam
 	@prove test/*.t
