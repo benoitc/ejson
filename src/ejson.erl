@@ -17,11 +17,11 @@
 init() ->
     SoName = case code:priv_dir(ejson) of
     {error, bad_name} ->
-        case filelib:is_dir(filename:join(["..", priv])) of
+        case filelib:is_dir(filename:join(["..", "priv"])) of
         true ->
-            filename:join(["..", priv, ejson]);
+            filename:join(["..", "priv", "ejson"]);
         false ->
-            filename:join([priv, ejson])
+            filename:join(["priv", "ejson"])
         end;
     Dir ->
         filename:join(Dir, ejson)
