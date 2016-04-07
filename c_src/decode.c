@@ -50,7 +50,7 @@ make_error(yajl_handle handle, ErlNifEnv* env)
     return enif_make_tuple(env, 2,
         enif_make_atom(env, "error"),
         enif_make_tuple(env, 2,
-            enif_make_uint(env, handle->bytesConsumed),
+            enif_make_uint(env, yajl_get_bytes_consumed(handle)),
             errMsg
         )
     );
@@ -247,7 +247,7 @@ reverse_tokens(ErlNifEnv* env, int argc, const ERL_NIF_TERM argv[])
     }
 
     status = yajl_parse(handle, bin.data, bin.size);
-    used = handle->bytesConsumed;
+    used = yajl_get_bytes_consumed(handle);
 
     // Parsing something like "2.0" (without quotes) will
     // cause a spurious semi-error. We add the extra size
